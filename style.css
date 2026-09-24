@@ -1,31 +1,1475 @@
-/**************/
-/* CSS REMEDY */
-/**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
-}
-
-
-
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
+
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+  /* Kleuren */
+  --kleur-tekst: #111111;
+  --kleur-wit: #ffffff;
+  --kleur-zwart: #050505;
+  --kleur-achtergrond: #f5f5f5;
+  --kleur-product: #f1f1f1;
+  --kleur-rand: #dddddd;
+  --kleur-grijs: #888888;
+  --kleur-donkergrijs: #292929;
+
+  /* Afstanden */
+  --ruimte-xs: 0.5em;
+  --ruimte-s: 0.75em;
+  --ruimte-m: 1em;
+  --ruimte-l: 1.5em;
+  --ruimte-xl: 2em;
+  --ruimte-xxl: 3em;
+
+  /* Tekstgroottes */
+  --tekst-xs: 0.65rem;
+  --tekst-s: 0.75rem;
+  --tekst-m: 1rem;
+  --tekst-l: 1.5rem;
+  --tekst-xl: 2rem;
+
+  /* Overige waarden */
+  --standaard-rand: 1px solid var(--kleur-rand);
+  --kleine-radius: 0.25em;
+  --hoofdletter-afstand: 0.12em;
+}
+
+/**************/
+/* CSS REMEDY */
+/**************/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/**********************/
+/* ALGEMENE INSTELLINGEN */
+/**********************/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background-color: var(--kleur-wit);
+  color: var(--kleur-tekst);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--kleur-tekst);
+  outline-offset: 0.2em;
+}
+
+/**********/
+/* HEADER */
+/**********/
+
+body > header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: var(--ruimte-m);
+
+  width: 100%;
+  padding: var(--ruimte-l);
+}
+
+body > header > a {
+  justify-self: start;
+}
+
+body > header > a img {
+  width: clamp(7.5em, 31vw, 10em);
+  height: auto;
+}
+
+body > header nav {
+  justify-self: end;
+}
+
+body > header nav ul {
+  display: grid;
+  justify-items: end;
+  gap: var(--ruimte-m);
+}
+
+body > header nav a {
+  color: var(--kleur-wit);
+
+  font-size: var(--tekst-s);
+  font-weight: bold;
+  letter-spacing: var(--hoofdletter-afstand);
+  text-transform: uppercase;
+}
+
+/*****************/
+/* HOMEPAGE HERO */
+/*****************/
+
+body:not(.productpagina) main > section:first-of-type {
+  position: relative;
+
+  display: grid;
+  align-items: end;
+
+  min-height: 100svh;
+  overflow: hidden;
+
+  background-color: var(--kleur-zwart);
+  color: var(--kleur-wit);
+}
+
+body:not(.productpagina) main > section:first-of-type > img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body:not(.productpagina) main > section:first-of-type > div {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  justify-items: start;
+  gap: var(--ruimte-m);
+
+  padding: var(--ruimte-l);
+  padding-bottom: 4em;
+}
+
+body:not(.productpagina) main > section:first-of-type div p {
+  font-size: var(--tekst-xs);
+  font-weight: bold;
+  letter-spacing: var(--hoofdletter-afstand);
+  text-transform: uppercase;
+}
+
+body:not(.productpagina) main > section:first-of-type h1 {
+  font-size: clamp(2rem, 9vw, 3.5rem);
+  font-weight: normal;
+  line-height: 1;
+}
+
+body:not(.productpagina) main > section:first-of-type div a {
+  padding: 1.1em 1.7em;
+
+  background-color: var(--kleur-wit);
+  color: var(--kleur-tekst);
+
+  font-size: var(--tekst-xs);
+  font-weight: bold;
+  letter-spacing: var(--hoofdletter-afstand);
+  text-transform: uppercase;
+}
+
+body:not(.productpagina) main > section:first-of-type > p {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+
+  width: 100%;
+  padding: var(--ruimte-m);
+
+  overflow: hidden;
+  white-space: nowrap;
+
+  background-color: var(--kleur-zwart);
+
+  text-align: center;
+  font-size: var(--tekst-xs);
+  letter-spacing: var(--hoofdletter-afstand);
+  text-transform: uppercase;
+}
+
+body:not(.productpagina) main > section:first-of-type > p:last-child {
+  display: none;
+}
+
+/************************/
+/* GROTE AFBEELDING */
+/************************/
+
+body:not(.productpagina) main > div:first-of-type {
+  display: grid;
+}
+
+body:not(.productpagina) main > div:first-of-type img {
+  width: 100%;
+  max-height: 46em;
+  object-fit: cover;
+}
+
+/********************/
+/* LATEST COLLECTION */
+/********************/
+
+.producten {
+  display: grid;
+  gap: var(--ruimte-l);
+
+  padding: var(--ruimte-xl) var(--ruimte-m);
+}
+
+.producten h2 {
+  font-size: clamp(1.5rem, 6vw, 2rem);
+  line-height: 1.1;
+}
+
+.productlijst {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--ruimte-xl) var(--ruimte-xs);
+}
+
+.productkaart {
+  display: grid;
+  align-content: start;
+  gap: 0.3em;
+
+  min-width: 0;
+}
+
+.productkaart > img,
+.productkaart > a > img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+
+  background-color: var(--kleur-product);
+}
+
+.productkaart p,
+.productkaart h3 {
+  font-size: var(--tekst-s);
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.productkaart p:first-of-type {
+  padding-top: var(--ruimte-xs);
+  font-weight: bold;
+}
+
+.productkaart p:nth-of-type(2) {
+  color: var(--kleur-grijs);
+}
+
+.producten > a {
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+  padding: 1.2em;
+
+  background-color: var(--kleur-zwart);
+  color: var(--kleur-wit);
+
+  font-size: var(--tekst-xs);
+  font-weight: bold;
+  letter-spacing: var(--hoofdletter-afstand);
+  text-transform: uppercase;
+}
+
+/*******************/
+/* LATEST FOOTWEAR */
+/*******************/
+
+.carousel {
+  display: grid;
+  gap: var(--ruimte-l);
+
+  padding: var(--ruimte-xl) var(--ruimte-m);
+  overflow: hidden;
+}
+
+.carousel h2 {
+  font-size: clamp(1.5rem, 6vw, 2rem);
+  line-height: 1.1;
+}
+
+.carousel > ul {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 70%;
+  gap: var(--ruimte-s);
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.carousel > ul::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel > ul > li {
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.carousel article {
+  display: grid;
+  align-content: start;
+  gap: 0.3em;
+}
+
+.carousel article img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+
+  background-color: var(--kleur-product);
+}
+
+.carousel article p,
+.carousel article h3 {
+  font-size: var(--tekst-s);
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.carousel article p:first-of-type {
+  padding-top: var(--ruimte-xs);
+  font-weight: bold;
+}
+
+.carousel article p:nth-of-type(2) {
+  color: var(--kleur-grijs);
+}
+
+.carousel > a {
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+  padding: 1.2em;
+
+  background-color: var(--kleur-zwart);
+  color: var(--kleur-wit);
+
+  font-size: var(--tekst-xs);
+  font-weight: bold;
+  letter-spacing: var(--hoofdletter-afstand);
+  text-transform: uppercase;
+}
+
+/**********************/
+/* LET'S CONNECT */
+/**********************/
+
+main > section:has(.tweede-carousel) {
+  display: grid;
+  justify-items: center;
+  gap: var(--ruimte-m);
+
+  padding: var(--ruimte-xl) var(--ruimte-m);
+
+  text-align: center;
+  overflow: hidden;
+}
+
+main > section:has(.tweede-carousel) > p:first-child {
+  font-size: var(--tekst-xs);
+  font-weight: bold;
+  letter-spacing: var(--hoofdletter-afstand);
+  text-transform: uppercase;
+}
+
+main > section:has(.tweede-carousel) > h2 {
+  font-size: var(--tekst-xl);
+  line-height: 1;
+}
+
+.tweede-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 68%;
+  gap: var(--ruimte-xs);
+
+  width: calc(100% + 2em);
+  padding-inline: var(--ruimte-m);
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.tweede-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.tweede-carousel li {
+  scroll-snap-align: center;
+}
+
+.tweede-carousel img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+main > section:has(.tweede-carousel) form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  width: 100%;
+  max-width: 28em;
+}
+
+main > section:has(.tweede-carousel) form label:empty {
+  display: none;
+}
+
+main > section:has(.tweede-carousel) input {
+  min-width: 0;
+  padding: var(--ruimte-m);
+
+  border: var(--standaard-rand);
+  border-radius: 0;
+
+  font-size: var(--tekst-s);
+}
+
+main > section:has(.tweede-carousel) button {
+  padding: var(--ruimte-m) var(--ruimte-l);
+
+  border: none;
+  background-color: var(--kleur-zwart);
+  color: var(--kleur-wit);
+
+  font-size: var(--tekst-xs);
+  letter-spacing: var(--hoofdletter-afstand);
+  text-transform: uppercase;
+}
+
+main > section:has(.tweede-carousel) > p:last-child {
+  color: var(--kleur-grijs);
+  font-size: var(--tekst-xs);
+}
+
+/************************/
+/* PRODUCTPAGINA HEADER */
+/************************/
+
+.productpagina {
+  background-color: var(--kleur-achtergrond);
+}
+
+.productpagina > header {
+  position: relative;
+
+  grid-template-columns: 1fr auto;
+  align-items: start;
+
+  min-height: 10em;
+  padding: 3.2em var(--ruimte-l) var(--ruimte-l);
+
+  background-color: var(--kleur-wit);
+}
+
+.productpagina > header > ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: var(--ruimte-xl);
+
+  width: 100%;
+  padding: var(--ruimte-s) var(--ruimte-m);
+
+  overflow: hidden;
+  white-space: nowrap;
+
+  border-bottom: var(--standaard-rand);
+}
+
+.productpagina > header > ul p {
+  font-size: var(--tekst-xs);
+  letter-spacing: var(--hoofdletter-afstand);
+  text-transform: uppercase;
+}
+
+.productpagina > header > a img {
+  width: clamp(8em, 38vw, 11em);
+}
+
+.productpagina > header nav a {
+  color: var(--kleur-tekst);
+}
+
+/*****************/
+/* BREADCRUMBS */
+/*****************/
+
+.productpagina main {
+  background-color: var(--kleur-wit);
+}
+
+.productpagina main > nav {
+  display: grid;
+
+  padding: var(--ruimte-m) var(--ruimte-l);
+  overflow: hidden;
+}
+
+.productpagina main > nav ul {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: var(--ruimte-s);
+
+  overflow: hidden;
+  white-space: nowrap;
+
+  font-size: var(--tekst-xs);
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.productpagina main > nav li {
+  min-width: 0;
+}
+
+.productpagina main > nav li:not(:last-child)::after {
+  padding-left: var(--ruimte-s);
+  content: "›";
+}
+
+.productpagina main > nav li:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*************************/
+/* PRODUCTAFBEELDINGEN */
+/*************************/
+
+.productpagina section[aria-label="Productfoto's"] {
+  display: grid;
+  overflow: hidden;
+
+  background-color: var(--kleur-product);
+}
+
+.productpagina section[aria-label="Productfoto's"] > ul {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 86%;
+  gap: var(--ruimte-xs);
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.productpagina section[aria-label="Productfoto's"] > ul::-webkit-scrollbar {
+  display: none;
+}
+
+.productpagina section[aria-label="Productfoto's"] li {
+  display: grid;
+  place-items: center;
+
+  scroll-snap-align: center;
+}
+
+.productpagina section[aria-label="Productfoto's"] img {
+  width: 100%;
+  height: min(110vw, 34em);
+  object-fit: contain;
+
+  background-color: var(--kleur-product);
+}
+
+/**********************/
+/* PRODUCTINFORMATIE */
+/**********************/
+
+.productpagina section[aria-labelledby="productnaam"] {
+  position: relative;
+
+  display: grid;
+  gap: var(--ruimte-s);
+
+  padding: var(--ruimte-l);
+
+  background-color: var(--kleur-wit);
+  border-radius: var(--kleine-radius);
+}
+
+.productpagina section[aria-labelledby="productnaam"] > p:first-child {
+  justify-self: start;
+
+  padding: 0.4em 0.6em;
+
+  background-color: var(--kleur-zwart);
+  color: var(--kleur-wit);
+
+  font-size: var(--tekst-xs);
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.productpagina section[aria-labelledby="productnaam"] > button {
+  position: absolute;
+  top: var(--ruimte-l);
+  right: var(--ruimte-l);
+
+  padding: 0;
+
+  border: none;
+  background: none;
+
+  font-size: 1.7rem;
+}
+
+.productpagina section[aria-labelledby="productnaam"] > p:nth-of-type(2) {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.productpagina #productnaam {
+  padding-right: 2.5em;
+
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+.productpagina section[aria-labelledby="productnaam"] > p:nth-of-type(3) {
+  font-size: var(--tekst-m);
+}
+
+.productpagina section[aria-labelledby="productnaam"] form {
+  display: grid;
+  gap: var(--ruimte-l);
+}
+
+/****************/
+/* KLEURKEUZES */
+/****************/
+
+.productpagina section[aria-labelledby="productnaam"] fieldset {
+  display: grid;
+  gap: var(--ruimte-s);
+
+  min-width: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.productpagina section[aria-labelledby="productnaam"] legend {
+  padding-bottom: var(--ruimte-s);
+
+  font-size: var(--tekst-s);
+  font-weight: bold;
+}
+
+.productpagina section[aria-labelledby="productnaam"] fieldset:first-of-type {
+  grid-template-columns: repeat(3, minmax(0, 6.5em));
+}
+
+.productpagina
+  section[aria-labelledby="productnaam"]
+  fieldset:first-of-type
+  legend {
+  grid-column: 1 / -1;
+
+  color: var(--kleur-grijs);
+  font-weight: normal;
+}
+
+.productpagina
+  section[aria-labelledby="productnaam"]
+  fieldset:first-of-type
+  label {
+  display: grid;
+  place-items: center;
+
+  cursor: pointer;
+}
+
+.productpagina
+  section[aria-labelledby="productnaam"]
+  fieldset:first-of-type
+  img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+
+  border: var(--standaard-rand);
+  background-color: var(--kleur-product);
+}
+
+.productpagina section[aria-labelledby="productnaam"] input[type="radio"] {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  opacity: 0;
+}
+
+.productpagina
+  section[aria-labelledby="productnaam"]
+  fieldset:first-of-type
+  label:has(input:checked)
+  img {
+  border-color: var(--kleur-tekst);
+  box-shadow: inset 0 0 0 1px var(--kleur-tekst);
+}
+
+.productpagina
+  section[aria-labelledby="productnaam"]
+  fieldset:first-of-type
+  label:has(input:focus-visible)
+  img {
+  outline: 2px solid var(--kleur-tekst);
+  outline-offset: 0.2em;
+}
+
+/***************/
+/* MAATKEUZES */
+/***************/
+
+.productpagina section[aria-labelledby="productnaam"] fieldset:nth-of-type(2) {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--ruimte-xs);
+}
+
+.productpagina
+  section[aria-labelledby="productnaam"]
+  fieldset:nth-of-type(2)
+  legend {
+  grid-column: 1 / -1;
+}
+
+.productpagina
+  section[aria-labelledby="productnaam"]
+  fieldset:nth-of-type(2)
+  label {
+  display: grid;
+  place-items: center;
+
+  min-height: 3.5em;
+
+  border: var(--standaard-rand);
+  background-color: var(--kleur-wit);
+
+  font-size: var(--tekst-s);
+  cursor: pointer;
+}
+
+.productpagina
+  section[aria-labelledby="productnaam"]
+  fieldset:nth-of-type(2)
+  label:has(input:checked) {
+  border-color: var(--kleur-tekst);
+  box-shadow: inset 0 0 0 1px var(--kleur-tekst);
+}
+
+.productpagina section[aria-labelledby="productnaam"] form > p {
+  font-size: var(--tekst-s);
+  line-height: 1.5;
+}
+
+.productpagina section[aria-labelledby="productnaam"] form > p a {
+  text-decoration: underline;
+}
+
+/******************/
+/* PRODUCTKNOPPEN */
+/******************/
+
+.productpagina section[aria-labelledby="productnaam"] form > button {
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+  min-height: 3.5em;
+  padding: var(--ruimte-m);
+
+  border: 1px solid var(--kleur-tekst);
+  background-color: var(--kleur-zwart);
+  color: var(--kleur-wit);
+
+  font-size: var(--tekst-xs);
+  font-weight: bold;
+  letter-spacing: var(--hoofdletter-afstand);
+  text-transform: uppercase;
+}
+
+.productpagina
+  section[aria-labelledby="productnaam"]
+  form
+  > button[type="button"] {
+  background-color: var(--kleur-wit);
+  color: var(--kleur-tekst);
+}
+
+/**********************/
+/* PRODUCTVOORDELEN */
+/**********************/
+
+.productpagina section[aria-labelledby="productnaam"] > ul {
+  display: grid;
+  gap: var(--ruimte-s);
+
+  padding-top: var(--ruimte-m);
+}
+
+.productpagina section[aria-labelledby="productnaam"] > ul li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--ruimte-s);
+
+  font-size: var(--tekst-s);
+}
+
+.productpagina section[aria-labelledby="productnaam"] > ul li::before {
+  content: "✓";
+}
+
+/**********************/
+/* PRODUCTBESCHRIJVING */
+/**********************/
+
+.productpagina section[aria-label="Productinformatie"] {
+  display: grid;
+  gap: var(--ruimte-l);
+
+  padding: 4em var(--ruimte-l);
+}
+
+.productpagina section[aria-label="Productinformatie"] > p {
+  font-size: clamp(1.05rem, 4vw, 1.4rem);
+  line-height: 1.5;
+}
+
+.productpagina details {
+  display: grid;
+
+  border-bottom: var(--standaard-rand);
+}
+
+.productpagina details summary {
+  padding-block: var(--ruimte-l);
+
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.productpagina details p,
+.productpagina details li {
+  font-size: var(--tekst-s);
+  line-height: 1.6;
+}
+
+.productpagina details p {
+  padding-bottom: var(--ruimte-m);
+}
+
+.productpagina details p a {
+  text-decoration: underline;
+}
+
+.productpagina details ul {
+  display: grid;
+  gap: 0.2em;
+
+  padding-bottom: var(--ruimte-m);
+}
+
+.productpagina details li::before {
+  content: "- ";
+}
+
+/********************/
+/* RELATED PRODUCTS */
+/********************/
+
+.productpagina main > section[aria-labelledby="gerelateerde-producten"] {
+  display: grid;
+  gap: var(--ruimte-l);
+
+  padding: var(--ruimte-xl) var(--ruimte-l);
+  overflow: hidden;
+}
+
+.productpagina #gerelateerde-producten {
+  font-size: clamp(1.5rem, 6vw, 2rem);
+}
+
+.productpagina main > section[aria-labelledby="gerelateerde-producten"] > ul {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 76%;
+  gap: var(--ruimte-s);
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.productpagina
+  main
+  > section[aria-labelledby="gerelateerde-producten"]
+  > ul::-webkit-scrollbar {
+  display: none;
+}
+
+.productpagina
+  main
+  > section[aria-labelledby="gerelateerde-producten"]
+  > ul
+  > li {
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.productpagina
+  main
+  > section[aria-labelledby="gerelateerde-producten"]
+  article {
+  display: grid;
+  align-content: start;
+  gap: 0.3em;
+}
+
+.productpagina
+  main
+  > section[aria-labelledby="gerelateerde-producten"]
+  article
+  img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+
+  background-color: var(--kleur-product);
+}
+
+.productpagina
+  main
+  > section[aria-labelledby="gerelateerde-producten"]
+  article
+  h3,
+.productpagina
+  main
+  > section[aria-labelledby="gerelateerde-producten"]
+  article
+  p {
+  font-size: var(--tekst-s);
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.productpagina
+  main
+  > section[aria-labelledby="gerelateerde-producten"]
+  article
+  p:first-of-type {
+  padding-top: var(--ruimte-xs);
+  font-weight: bold;
+}
+
+.productpagina
+  main
+  > section[aria-labelledby="gerelateerde-producten"]
+  article
+  p:nth-of-type(3) {
+  color: var(--kleur-grijs);
+}
+
+/**********/
+/* FOOTER */
+/**********/
+
+body > footer {
+  display: grid;
+  gap: var(--ruimte-xl);
+
+  padding: var(--ruimte-xl) var(--ruimte-l);
+
+  background-color: var(--kleur-zwart);
+  color: var(--kleur-wit);
+}
+
+body > footer > section {
+  display: grid;
+  gap: var(--ruimte-m);
+}
+
+body > footer > section h2 {
+  font-size: clamp(2rem, 9vw, 3rem);
+  line-height: 0.95;
+}
+
+body > footer > section p {
+  max-width: 35em;
+
+  font-size: var(--tekst-s);
+  line-height: 1.5;
+}
+
+body > footer > section a {
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+  padding: var(--ruimte-m);
+
+  background-color: var(--kleur-wit);
+  color: var(--kleur-tekst);
+
+  font-size: var(--tekst-xs);
+  font-weight: bold;
+  letter-spacing: var(--hoofdletter-afstand);
+  text-transform: uppercase;
+}
+
+body > footer > nav {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: var(--ruimte-xxl);
+}
+
+body > footer > nav ul {
+  display: grid;
+  align-content: start;
+  gap: var(--ruimte-s);
+}
+
+body > footer > nav a {
+  font-size: var(--tekst-xs);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/****************/
+/* SOCIAL MEDIA */
+/****************/
+
+.social-media ul {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  align-items: center;
+  gap: var(--ruimte-l);
+}
+
+.social-media img {
+  width: 1em;
+  height: 1em;
+  object-fit: contain;
+}
+
+/*********************/
+/* FOOTER PROMOTIES */
+/*********************/
+
+.footer-promoties {
+  display: grid;
+  gap: var(--ruimte-xs);
+}
+
+.footer-promoties article {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--ruimte-s);
+
+  min-height: 4em;
+  padding: var(--ruimte-xs);
+
+  background-color: var(--kleur-donkergrijs);
+}
+
+.footer-promoties article > img {
+  width: 3em;
+  height: 3em;
+  object-fit: contain;
+}
+
+.footer-promoties article > div {
+  display: grid;
+  gap: 0.2em;
+}
+
+.footer-promoties p {
+  color: #cccccc;
+
+  font-size: 0.55rem;
+  text-transform: uppercase;
+}
+
+.footer-promoties h3 {
+  font-size: var(--tekst-s);
+  font-weight: normal;
+}
+
+.footer-promoties article > a {
+  padding: var(--ruimte-s);
+
+  background-color: var(--kleur-wit);
+  color: var(--kleur-tekst);
+
+  font-size: var(--tekst-xs);
+  text-transform: uppercase;
+}
+
+/*********************/
+/* ONDERKANT FOOTER */
+/*********************/
+
+.footer-onderkant {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--ruimte-s);
+
+  color: #aaaaaa;
+  font-size: var(--tekst-xs);
+}
+
+.footer-onderkant ul {
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: var(--ruimte-m);
+}
+
+/******************************/
+/* CSS VOOR HET WINKELMANDJE */
+/******************************/
+
+/**********************/
+/* CART-KNOP IN HEADER */
+/**********************/
+
+#cart-button {
+  position: relative;
+
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+
+  font-size: var(--tekst-s);
+  font-weight: bold;
+  letter-spacing: var(--hoofdletter-afstand);
+  text-transform: uppercase;
+}
+
+/********************/
+/* RODE CART-STIP */
+/********************/
+
+#cart-aantal {
+  display: none;
+}
+
+#cart-aantal.actief {
+  position: absolute;
+  top: -0.35em;
+  right: -0.65em;
+
+  display: block;
+
+  width: 0.5em;
+  height: 0.5em;
+
+  background-color: #df5858;
+  border-radius: 50%;
+}
+
+#cart-aantal.knipperen {
+  animation: cart-knipperen 0.4s ease-in-out 3;
+}
+
+@keyframes cart-knipperen {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/**************************/
+/* CART DIALOG → POSITION */
+/**************************/
+
+#cart-dialog {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  bottom: auto;
+  left: auto;
+  z-index: 20;
+
+  width: min(calc(100% - 2em), 22em);
+
+  max-height: calc(100svh - 2em);
+  margin: 0;
+  padding: var(--ruimte-xl);
+
+  overflow-y: auto;
+
+  background-color: var(--kleur-wit);
+  color: var(--kleur-tekst);
+
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 0.5em 2em rgb(0 0 0 / 25%);
+}
+
+/***********************/
+/* CART DIALOG → FORM */
+/***********************/
+
+#cart-dialog form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--ruimte-l);
+}
+
+#cart-dialog h2 {
+  grid-column: 1;
+  grid-row: 1;
+
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+/******************************/
+/* CART DIALOG → SLUITKNOP */
+/******************************/
+
+#cart-dialog button.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 3em;
+  aspect-ratio: 1;
+  padding: 0;
+
+  border: var(--standaard-rand);
+  background-color: var(--kleur-wit);
+  color: var(--kleur-tekst);
+
+  font-size: var(--tekst-s);
+  font-weight: bold;
+}
+
+/*****************************/
+/* PRODUCT IN CART DIALOG */
+/*****************************/
+
+#cart-dialog section {
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: 6em 1fr;
+  gap: var(--ruimte-m);
+  align-items: start;
+}
+
+#cart-dialog section > img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+
+  background-color: var(--kleur-product);
+}
+
+#cart-dialog section > div {
+  display: grid;
+  gap: var(--ruimte-xs);
+}
+
+#cart-dialog section p {
+  margin: 0;
+
+  font-size: var(--tekst-s);
+  line-height: 1.4;
+}
+
+#cart-dialog section p:first-child {
+  font-weight: bold;
+}
+
+/****************************/
+/* GO TO CART-KNOP */
+/****************************/
+
+#cart-dialog form > a {
+  grid-column: 1 / -1;
+
+  display: grid;
+  place-items: center;
+
+  padding: var(--ruimte-m);
+
+  background-color: var(--kleur-zwart);
+  color: var(--kleur-wit);
+
+  font-size: var(--tekst-xs);
+  font-weight: bold;
+  letter-spacing: var(--hoofdletter-afstand);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/******************************/
+/* CART DIALOG → ANIMATIE */
+/******************************/
+
+@media (prefers-reduced-motion: no-preference) {
+  #cart-aantal.knipperen {
+    animation: cart-knipperen 0.4s ease-in-out 3;
+  }
+
+  @supports (transition: display 1s allow-discrete) {
+    #cart-dialog {
+      transition:
+        display 0.15s allow-discrete,
+        overlay 0.15s allow-discrete,
+        scale 0.15s;
+
+      scale: 0;
+      transform-origin: top right;
+    }
+
+    #cart-dialog[open] {
+      transition: scale 0.3s;
+      scale: 1;
+    }
+
+    @starting-style {
+      #cart-dialog[open] {
+        scale: 0;
+      }
+    }
+  }
+}
+
+/**************************************/
+/* MINDER ANIMATIE VOOR TOEGANKELIJKHEID */
+/**************************************/
+
+@media (prefers-reduced-motion: reduce) {
+  #cart-aantal.knipperen {
+    animation: none;
+  }
+}
+footer :focus-visible {
+	outline-color: var(--kleur-wit);
+}
+.productpagina section[aria-label="Productfoto's"] img {
+	transition:
+		opacity 0.3s ease,
+		scale 0.3s ease;
+}
+
+.productpagina
+section[aria-label="Productfoto's"]
+img:active {
+	scale: 0.98;
+}
+
+/*********************************/
+/* FOOTER SCROLL-ANIMATIE */
+/*********************************/
+
+@keyframes footer-tekst-inbeeld {
+	from {
+		opacity: 0;
+		transform:
+			translateY(1.5em)
+			scale(0.9);
+	}
+
+	to {
+		opacity: 1;
+		transform:
+			translateY(0)
+			scale(1);
+	}
 }
 
 
+@supports (animation-timeline: view()) {
+	@media (prefers-reduced-motion: no-preference) {
+		body > footer > section h2 {
+			animation:
+				footer-tekst-inbeeld
+				linear
+				both;
 
-
-
-/****************/
-/* JOUW STYLING */
-/****************/
-
-/* jouw code */
-
+			animation-timeline: view();
+			animation-range:
+				entry 0%
+				entry 90%;
+		}
+	}
+}
