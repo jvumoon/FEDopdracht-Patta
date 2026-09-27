@@ -62,7 +62,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Lijst met je bevindingen die in de test naar voren kwamen:
 De bevindingen die ik heb opgedaan na de eerste test zijn dat bij de content, global code en keyboard, headings, lists, images en controls alles goed is op de originele website.
 Dewi geeft wel aan dat bij het stukje over keyboard dat het op de website soms lastig is omdat hij stukjes overslaat of iets niet goed aangeeft omdat de patta site veel verborgen op de site heeft wat niet te zien is maar wel word voorgelezen. Bij mobile en touch is horizontaal scrollen niet van toepassing. Daarnaast heeft de website wel video's alleen spelen deze automatisch af en kunnen deze niet gepauzeerd worden of uitgezet worden dat ze niet meteen auto play afspelen. Daarnaast wordt high contrast mode niet ondersteund en heeft de website geen light- en darkmodeversie.
-<img src="" width="375px" alt="product pagina hoodie patta">
+<img src="FED 25-26 - Blok 1 - WCAG checklist.pdf" width="375px" alt="checklist WCAG">
+
 </details>
 
 
