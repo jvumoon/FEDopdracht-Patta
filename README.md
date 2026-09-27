@@ -95,26 +95,26 @@ Dewi geeft wel aan dat bij het stukje over keyboard dat het op de website soms l
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
-
-  ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  Bij voortgangsgesprek 1 heb ik mijn breakdownschetsen aan Danny laten zien en gevraagd om feedback.
 
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
+  Er waren nog een paar punten die ik beter anders kon doen of dingen die nog toegevoegd moesten worden:
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+- Uitklapmenu’s op de productpagina maken met <details>.
+- Kleur, maat en Add to Cart samenvoegen in één <form> en de juiste input-elementen gebruiken.
+- Beter kijken naar de semantische opbouw van de <header> en <nav> op beide pagina’s.
+- Op de homepagina de hero/intro onderdeel maken van de <header>.
+- Producten opbouwen met losse <article>-elementen in plaats van <ul> en <li>.
+- Links naar andere pagina’s als <a href=""> gebruiken in plaats van <button>, en deze met CSS als knop stylen.
+- Headingstructuur verbeteren, bijvoorbeeld Latest Footwear en Let’s Connect als h2.
+- Formulieren voorzien van de juiste form- en input-elementen.
+- Footer met CSS Grid opbouwen in plaats van Flexbox.
+- Klikbare <div>-elementen in de footer vervangen door <a>-elementen.
+
+  Na het voortgangsgesprek heb ik mijn breakdownschetsen aangepast:
+   <img src="pagina1updated.png" width="375px" alt="Updated breakdown van de hele pagina">
+  <img src="pagina2updated.png" width="375px" alt="Updated breakdown van de hele pagina">
 
 </details>
 
