@@ -101,19 +101,20 @@ Dewi geeft wel aan dat bij het stukje over keyboard dat het op de website soms l
   ### Verslag van meeting
   Er waren nog een paar punten die ik beter anders kon doen of dingen die nog toegevoegd moesten worden:
 
-- Uitklapmenu’s op de productpagina maken met <details>.
-- Kleur, maat en Add to Cart samenvoegen in één <form> en de juiste input-elementen gebruiken.
-- Beter kijken naar de semantische opbouw van de <header> en <nav> op beide pagina’s.
-- Op de homepagina de hero/intro onderdeel maken van de <header>.
-- Producten opbouwen met losse <article>-elementen in plaats van <ul> en <li>.
-- Links naar andere pagina’s als <a href=""> gebruiken in plaats van <button>, en deze met CSS als knop stylen.
+- Uitklapmenu’s op de productpagina maken met < details>.
+- Kleur, maat en Add to Cart samenvoegen in één < form> en de juiste input-elementen gebruiken.
+- Beter kijken naar de semantische opbouw van de < header> en < nav> op beide pagina’s.
+- Op de homepagina de hero/intro onderdeel maken van de < header>.
+- Producten opbouwen met losse < article>-elementen in plaats van < ul> en < li>.
+- Links naar andere pagina’s als < a href=""> gebruiken in plaats van < button>, en deze met CSS als knop stylen.
 - Headingstructuur verbeteren, bijvoorbeeld Latest Footwear en Let’s Connect als h2.
 - Formulieren voorzien van de juiste form- en input-elementen.
 - Footer met CSS Grid opbouwen in plaats van Flexbox.
-- Klikbare <div>-elementen in de footer vervangen door <a>-elementen.
+- Klikbare < div>-elementen in de footer vervangen door < a>-elementen.
 
   Na het voortgangsgesprek heb ik mijn breakdownschetsen aangepast:
-   <img src="pagina1updated.png" width="375px" alt="Updated breakdown van de hele pagina">
+  
+  <img src="pagina1updated.png" width="375px" alt="Updated breakdown van de hele pagina">
   <img src="pagina2updated.png" width="375px" alt="Updated breakdown van de hele pagina">
 
 </details>
