@@ -180,7 +180,7 @@ Ik moest bij de animaties ook rekening houden met toegankelijkheid, bijvoorbeeld
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+<img src="FED 25-26 - Blok 1 - WCAG checklist Mtima.pdf" width="375px" alt="checklist WCAG">
 Tijdens de eerste test werd vooral gekeken naar de basis van de website. De tekst werd als duidelijk beoordeeld, maar de HTML-validator gaf nog fouten aan en de tester kon maar één van de twee pagina’s vinden. Daarna heb ik de navigatie tussen de homepage en productpagina verbeterd en beide pagina’s opnieuw gecontroleerd.
 
 De tweede test was uitgebreider en leverde de volgende bevindingen en verbeteringen op:
