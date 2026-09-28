@@ -275,12 +275,126 @@ Patta's officiele website:
 <details open>
   <summary>continu bijhouden terwijl je werkt</summary>
 
-  Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg). 
-  Nb. ChatGpT en andere AI horen er ook bij.
-  Nb. Vermeld de bronnen ook in je code.
+ ## Bronnenlijst
 
-  1. bron 1
-  2. bron 2
-  3. ...
+### Lesmateriaal
+
+- Hogeschool van Amsterdam. *FED 25–26 – Blok 1 – Intro media queries*.
+  Gebruikt voor media queries, responsive styling en `prefers-reduced-motion`.
+  [https://dlo.mijnhva.nl/content/enforced/778436-FDMCI-CRS-00051001-CMD-2627/FED%2025-26%20-%20Blok%201%20-%20Intro%20media%20queries.pdf](https://dlo.mijnhva.nl/content/enforced/778436-FDMCI-CRS-00051001-CMD-2627/FED%2025-26%20-%20Blok%201%20-%20Intro%20media%20queries.pdf)
+
+- Hogeschool van Amsterdam. *FED 25–26 – Blok 1 – Beoordelingsformulier*.
+  Gebruikt om de technische voorwaarden, de surface plane en de beoordelingscriteria te controleren.
+
+- Hogeschool van Amsterdam. *FED 25–26 – Blok 1 – WCAG-checklist*.
+  Gebruikt voor het controleren van de toegankelijkheid van de website.
+
+- Shooft. *Voorbeeld van een modeless dialog*. CodePen.
+  Gebruikt als voorbeeld voor het openen en sluiten van het winkelmandje met het HTML-element `<dialog>`.
+  [https://codepen.io/shooft/pen/azvKYVZ](https://codepen.io/shooft/pen/azvKYVZ)
+
+### Ontwerp en content
+
+- Patta. *Officiële website*.
+  Gebruikt als visuele inspiratie voor de homepage, productkaarten, carrousels, typografie, navigatie en footer.
+  [https://patta.nl/](https://patta.nl/)
+
+### HTML
+
+- MDN Web Docs. *The dialog element*.
+  Gebruikt voor het winkelmandje als modeless dialog en het openen en sluiten daarvan met JavaScript.
+  [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog)
+
+- MDN Web Docs. *The details disclosure element*.
+  Gebruikt voor de uitklapbare onderdelen “Size & Fit”, “Shipping & Returns” en “Description”.
+  [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details)
+
+- MDN Web Docs. *How to structure a web form*.
+  Gebruikt voor de opbouw van de formulieren met `form`, `fieldset`, `legend`, `label` en `input`.
+  [https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
+
+- MDN Web Docs. *Input type radio*.
+  Gebruikt voor het selecteren van één productkleur en één maat.
+  [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/radio](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/radio)
+
+### CSS
+
+- MDN Web Docs. *CSS Grid Layout*.
+  Gebruikt voor de layout van de pagina’s, productkaarten, formulieren, header en footer.
+  [https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout)
+
+- MDN Web Docs. *Using CSS custom properties*.
+  Gebruikt voor de kleuren, witruimte, tekstgroottes en andere herbruikbare waarden in `:root`.
+  [https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)
+
+- MDN Web Docs. *Creating CSS carousels*.
+  Gebruikt voor de horizontaal scrollende carrousels op de website.
+  [https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overflow/Carousels](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overflow/Carousels)
+
+- MDN Web Docs. *CSS Scroll Snap*.
+  Gebruikt om onderdelen van een carrousel na het scrollen op een vaste positie te laten stoppen.
+  [https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll_snap](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll_snap)
+
+- MDN Web Docs. *Prefers-reduced-motion*.
+  Gebruikt om animaties te verminderen voor gebruikers die deze toegankelijkheidsvoorkeur hebben ingesteld.
+  [https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion)
+
+- Chrome for Developers. *Animate elements on scroll with scroll-driven animations*.
+  Gebruikt voor de scrollanimatie van “Each One Teach One” in de footer.
+  [https://developer.chrome.com/docs/css-ui/scroll-driven-animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)
+
+- Bramus. *Scroll-driven Animations*.
+  Gebruikt voor uitleg en voorbeelden van animaties die reageren op de scrollpositie.
+  [https://scroll-driven-animations.style/#learn](https://scroll-driven-animations.style/#learn)
+
+### JavaScript
+
+- MDN Web Docs. *Document: querySelector() method*.
+  Gebruikt om HTML-elementen vanuit JavaScript te selecteren.
+  [https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+
+- MDN Web Docs. *Document: querySelectorAll() method*.
+  Gebruikt om meerdere kleur- en maatkeuzes vanuit JavaScript te selecteren.
+  [https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)
+
+- MDN Web Docs. *EventTarget: addEventListener() method*.
+  Gebruikt om te reageren op klikken, formulierverzendingen, wijzigingen en toetsenbordinvoer.
+  [https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+
+- MDN Web Docs. *HTMLDialogElement: show() method*.
+  Gebruikt om het winkelmandje als een modeless dialog te openen.
+  [https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/show](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/show)
+
+- MDN Web Docs. *CSSStyleDeclaration: setProperty() method*.
+  Gebruikt om een CSS custom property vanuit JavaScript aan te passen wanneer een andere productkleur wordt geselecteerd.
+  [https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/setProperty](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/setProperty)
+
+- MDN Web Docs. *Window: setTimeout() method*.
+  Gebruikt om het winkelmandje na vijf seconden automatisch te sluiten.
+  [https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout)
+
+### Validatie
+
+- W3C. *Nu HTML Checker*.
+  Gebruikt om de HTML-code te controleren op fouten en waarschuwingen.
+  [https://validator.w3.org/nu/](https://validator.w3.org/nu/)
+
+- W3C. *CSS Validation Service*.
+  Gebruikt om de CSS-code te controleren op fouten en waarschuwingen.
+  [https://jigsaw.w3.org/css-validator/](https://jigsaw.w3.org/css-validator/)
+
+### Gebruik van AI
+
+- OpenAI. *ChatGPT*.
+Tijdens dit project heb ik ChatGPT gebruikt als hulpmiddel bij het controleren en verbeteren van mijn HTML-, CSS- en JavaScriptcode. Ik heb AI onder andere gebruikt voor uitleg over semantische HTML, CSS Grid, custom properties, toegankelijkheid en JavaScript-interacties. Ook heb ik AI gebruikt om fouten en dubbele code op te sporen.
+  [https://chatgpt.com/](https://chatgpt.com/)
+Aantal prompts die ik heb gebruikt:
+- “Hoe kan ik een product met een gekozen kleur en maat aan een winkelmandje toevoegen?”
+- “Hoe maak ik met CSS een horizontaal scrollende carrousel?”
+- “Hoe gebruik ik prefers-reduced-motion voor toegankelijkheid?”
+- “Kun je controleren of mijn HTML semantisch is opgebouwd?”
+- “Kun je dubbele of ongebruikte CSS-regels aanwijzen?”
+- “Kun je al mijn bronnen in een overzichtelijke bronnenlijst zetten?”
+
 
 </details>
