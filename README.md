@@ -210,17 +210,27 @@ Ik heb geen gebruik gemaakt van voortgangsgesprek 3.
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
+  scherm 1
  <img src="uitwerkingscreenshot1.png" width="375px" alt="Uitwerking Patta website">
+   scherm 2
 <img src="uitwerkingscreenshot2.png" width="375px" alt="Uitwerking Patta website">
+  scherm 3
 <img src="uitwerkingscreenshot3.png" width="375px" alt="Uitwerking Patta website">
+  scherm 4
 <img src="uitwerkingscreenshot4.png" width="375px" alt="Uitwerking Patta website">
+  scherm 5
 <img src="uitwerkingscreenshot5.png" width="375px" alt="Uitwerking Patta website">
+  scherm 6
 <img src="uitwerkingscreenshot6.png" width="375px" alt="Uitwerking Patta website">
+  scherm 7
 <img src="uitwerkingscreenshot7.png" width="375px" alt="Uitwerking Patta website">
-<img src="uitwerkingscreenshot7.png" width="375px" alt="Uitwerking Patta website">
+  scherm 8
 <img src="uitwerkingscreenshot8.png" width="375px" alt="Uitwerking Patta website">
+  scherm 9
 <img src="uitwerkingscreenshot9.png" width="375px" alt="Uitwerking Patta website">
+  scherm 10
 <img src="uitwerkingscreenshot10.png" width="375px" alt="Uitwerking Patta website">
+  scherm 11
 <img src="uitwerkingscreenshot11.png" width="375px" alt="Uitwerking Patta website">
 
   ### Dit ging goed/Heb ik geleerd: 
