@@ -129,26 +129,44 @@ Dewi geeft wel aan dat bij het stukje over keyboard dat het op de website soms l
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Tijdens dit voortgangsgesprek stond de basis van mijn HTML. De structuur van de twee pagina’s was grotendeels aanwezig, maar de styling en interacties moesten nog verder worden uitgewerkt. Daardoor had ik nog niet veel werkende onderdelen om te demonstreren.
+
+Ik heb mijn HTML-code laten zien en vragen gesteld over hoe ik bepaalde onderdelen van de Patta-website kon namaken. Dit ging onder andere over:
+
+de automatisch bewegende carrousel bij “Let’s connect”;
+
+de tekst “Each One Teach One” die tijdens het scrollen in beeld beweegt;
+
+welke interacties ik met CSS kon maken;
+
+voor welke onderdelen JavaScript nodig zou zijn;
+
+hoe ik extra aandacht kon besteden aan de surface plane.
+
+De HTML-structuur ging al redelijk goed. Het lastigste vond ik om te bepalen welke techniek ik voor iedere interactie moest gebruiken en hoe ik de animaties op een toegankelijke manier kon uitwerken.
+<img src="screenshotHTML.png" width="375px" alt="Updated breakdown van de hele pagina">
+<img src="screenshotalleenHTML" width="375px" alt="Updated breakdown van de hele pagina">
+ 
+### Verslag van meeting
+Tijdens het gesprek kreeg ik de volgende feedback en adviezen:
+
+Voor de carrousel kon ik voornamelijk CSS gebruiken, bijvoorbeeld met horizontale overflow, scroll snap en een CSS-animatie.
+
+Voor de footeranimatie kon ik gebruikmaken van scroll-driven animations.
+
+De docent verwees mij voor de footeranimatie naar de documentatie van Chrome Developers:
+https://developer.chrome.com/docs/css-ui/scroll-driven-animations?hl=nl
+
+Daarnaast kreeg ik de website Scroll-driven Animations als bron voor uitleg en voorbeelden:
+https://scroll-driven-animations.style/#learn
+
+JavaScript hoefde niet voor iedere animatie te worden gebruikt. CSS was geschikter voor de visuele bewegingen.
+
+JavaScript kon ik later gebruiken voor uitgebreidere interacties, zoals het selecteren van een kleur en maat en het toevoegen van een product aan het winkelmandje.
+
+Ik moest bij de animaties ook rekening houden met toegankelijkheid, bijvoorbeeld door prefers-reduced-motion toe te voegen.
 
 
-  ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
-
-  ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
-
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
 
 </details>
 
