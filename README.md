@@ -181,7 +181,22 @@ Ik moest bij de animaties ook rekening houden met toegankelijkheid, bijvoorbeeld
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+Tijdens de eerste test werd vooral gekeken naar de basis van de website. De tekst werd als duidelijk beoordeeld, maar de HTML-validator gaf nog fouten aan en de tester kon maar één van de twee pagina’s vinden. Daarna heb ik de navigatie tussen de homepage en productpagina verbeterd en beide pagina’s opnieuw gecontroleerd.
 
+De tweede test was uitgebreider en leverde de volgende bevindingen en verbeteringen op:
+
+- Sommige links in de footer hadden alleen de tekst **‘Open’**. De links hebben nu ieder een beschrijvende `aria-label`, waardoor een screenreader vertelt welke app wordt geopend.
+- Er ontbrak een **skiplink**. Deze is op beide pagina’s toegevoegd, zodat toetsenbordgebruikers direct naar de hoofdinhoud kunnen springen.
+- Sommige grijze teksten, zoals productkleuren en de privacytekst, hadden te weinig contrast. De grijze kleur in de CSS is donkerder gemaakt.
+- De socialmedia-iconen waren klein en daardoor lastig aan te klikken. De iconen en hun klikbare vlak zijn groter gemaakt.
+- De automatische carrousel begint direct te bewegen. Er was al een knop aanwezig waarmee de animatie gepauzeerd kan worden.
+- De website hield al rekening met `prefers-reduced-motion`. Na de test is ook het vergrotingseffect bij de productopties voor deze gebruikers uitgeschakeld.
+- De toetsenbordvolgorde was niet overal direct duidelijk. De zichtbare focusstijl is gecontroleerd, zodat beter te zien is welk element geselecteerd is.
+- Tijdens beide tests werden nog HTML-validatiefouten gevonden. Daarna zijn beide pagina’s opnieuw gecontroleerd en zijn onder andere de ID’s, interne linkdoelen en CSS-accolades nagekeken.
+- De tekst **‘Unlock a world of possibilities’** werd in de tweede test als beeldspraak genoemd. Deze tekst heb ik behouden, omdat het de originele tekst van de website is.
+- In dark mode en high-contrast mode waren sommige knoppen minder duidelijk zichtbaar. Dit blijft een mogelijk verbeterpunt voor een volgende versie.
+
+Vergeleken met de eerste test zijn nu beide pagina’s bereikbaar, zijn meer toegankelijkheidsonderdelen getest en zijn vooral de skiplink, linkomschrijvingen, contrasten, klikvlakken en instellingen voor verminderde beweging verbeterd.
 </details>
 
 
