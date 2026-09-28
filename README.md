@@ -215,22 +215,31 @@ Ik heb geen gebruik gemaakt van voortgangsgesprek 3.
  <br>
    scherm 2
 <img src="uitwerkingscreenshot2.png" width="375px" alt="Uitwerking Patta website">
+<br>
   scherm 3
 <img src="uitwerkingscreenshot3.png" width="375px" alt="Uitwerking Patta website">
+<br>
   scherm 4
 <img src="uitwerkingscreenshot4.png" width="375px" alt="Uitwerking Patta website">
+<br>
   scherm 5
 <img src="uitwerkingscreenshot5.png" width="375px" alt="Uitwerking Patta website">
+<br>
   scherm 6
 <img src="uitwerkingscreenshot6.png" width="375px" alt="Uitwerking Patta website">
+<br>
   scherm 7
 <img src="uitwerkingscreenshot7.png" width="375px" alt="Uitwerking Patta website">
+<br>
   scherm 8
 <img src="uitwerkingscreenshot8.png" width="375px" alt="Uitwerking Patta website">
+<br>
   scherm 9
 <img src="uitwerkingscreenshot9.png" width="375px" alt="Uitwerking Patta website">
+<br>
   scherm 10
 <img src="uitwerkingscreenshot10.png" width="375px" alt="Uitwerking Patta website">
+<br>
   scherm 11
 <img src="uitwerkingscreenshot11.png" width="375px" alt="Uitwerking Patta website">
 
