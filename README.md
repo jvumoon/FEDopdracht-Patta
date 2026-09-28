@@ -210,8 +210,18 @@ Ik heb geen gebruik gemaakt van voortgangsgesprek 3.
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
-
+ <img src="uitwerkingscreenshot1.png" width="375px" alt="Uitwerking Patta website">
+<img src="uitwerkingscreenshot2.png" width="375px" alt="Uitwerking Patta website">
+<img src="uitwerkingscreenshot3.png" width="375px" alt="Uitwerking Patta website">
+<img src="uitwerkingscreenshot4.png" width="375px" alt="Uitwerking Patta website">
+<img src="uitwerkingscreenshot5.png" width="375px" alt="Uitwerking Patta website">
+<img src="uitwerkingscreenshot6.png" width="375px" alt="Uitwerking Patta website">
+<img src="uitwerkingscreenshot7.png" width="375px" alt="Uitwerking Patta website">
+<img src="uitwerkingscreenshot7.png" width="375px" alt="Uitwerking Patta website">
+<img src="uitwerkingscreenshot8.png" width="375px" alt="Uitwerking Patta website">
+<img src="uitwerkingscreenshot9.png" width="375px" alt="Uitwerking Patta website">
+<img src="uitwerkingscreenshot10.png" width="375px" alt="Uitwerking Patta website">
+<img src="uitwerkingscreenshot11.png" width="375px" alt="Uitwerking Patta website">
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
