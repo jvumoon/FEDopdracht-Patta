@@ -144,8 +144,8 @@ voor welke onderdelen JavaScript nodig zou zijn;
 hoe ik extra aandacht kon besteden aan de surface plane.
 
 De HTML-structuur ging al redelijk goed. Het lastigste vond ik om te bepalen welke techniek ik voor iedere interactie moest gebruiken en hoe ik de animaties op een toegankelijke manier kon uitwerken.
-<img src="screenshotHTML.png" width="375px" alt="Updated breakdown van de hele pagina">
-<img src="screenshotalleenHTML" width="375px" alt="Updated breakdown van de hele pagina">
+<img src="screenshotHTML.png" width="375px" alt="screenshot html in vscode">
+<img src="screenshotalleenHTML.png" width="375px" alt="screenshot html op browser">
  
 ### Verslag van meeting
 Tijdens het gesprek kreeg ik de volgende feedback en adviezen:
