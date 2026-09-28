@@ -283,12 +283,6 @@ Patta's officiele website:
   Gebruikt voor media queries, responsive styling en `prefers-reduced-motion`.
   [https://dlo.mijnhva.nl/content/enforced/778436-FDMCI-CRS-00051001-CMD-2627/FED%2025-26%20-%20Blok%201%20-%20Intro%20media%20queries.pdf](https://dlo.mijnhva.nl/content/enforced/778436-FDMCI-CRS-00051001-CMD-2627/FED%2025-26%20-%20Blok%201%20-%20Intro%20media%20queries.pdf)
 
-- Hogeschool van Amsterdam. *FED 25–26 – Blok 1 – Beoordelingsformulier*.
-  Gebruikt om de technische voorwaarden, de surface plane en de beoordelingscriteria te controleren.
-
-- Hogeschool van Amsterdam. *FED 25–26 – Blok 1 – WCAG-checklist*.
-  Gebruikt voor het controleren van de toegankelijkheid van de website.
-
 - Shooft. *Voorbeeld van een modeless dialog*. CodePen.
   Gebruikt als voorbeeld voor het openen en sluiten van het winkelmandje met het HTML-element `<dialog>`.
   [https://codepen.io/shooft/pen/azvKYVZ](https://codepen.io/shooft/pen/azvKYVZ)
