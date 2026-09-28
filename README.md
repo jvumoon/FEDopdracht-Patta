@@ -244,16 +244,25 @@ Ik heb geen gebruik gemaakt van voortgangsgesprek 3.
 <img src="uitwerkingscreenshot11.png" width="375px" alt="Uitwerking Patta website">
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+Ik ben vooral tevreden over de productpagina. De gebruiker kan een kleur en maat kiezen en het product toevoegen aan het winkelmandje. Daarna verschijnen de gekozen opties in een popup en komt er een rood bolletje bij Cart te staan.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+Ook is het gelukt om de “Let’s connect”-carrousel automatisch te laten bewegen, een scrollanimatie aan de footer toe te voegen en rekening te houden met prefers-reduced-motion.
+
+<img src="uitwerkingscreenshot8.png" width="375px" alt="De kleur- en maatkeuzes op de productpagina">
+
+<img src="uitwerkingscreenshot10.png" width="375px" alt="Het geopende winkelmandje">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Het is niet helemaal gelukt om de “Let’s connect”-carrousel hetzelfde te laten bewegen als op de officiële Patta-website. Op de originele website bewegen de afbeeldingen niet alleen horizontaal, maar draaien ze tijdens de beweging ook een beetje schuin. Mijn carrousel beweegt alleen horizontaal.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
-</details>
+Ik vind het jammer dat dit verschil zichtbaar blijft. Voor de schuine beweging was complexere animatiecode nodig die ik op dit moment nog niet goed genoeg begrijp en daardoor ook niet goed zou kunnen uitleggen. Daarom heb ik gekozen voor een eenvoudigere animatie die ik wel begrijp en kan aanpassen.
+
+Daarnaast wilde ik de kopjes “Latest Footwear” en “Let’s connect” tijdens het scrollen laten inspringen, zoals de tekst in de footer. Dit werkte niet goed: de kopjes verdwenen soms of kwamen op een verkeerde positie terecht. Daarom heb ik deze animatie alleen bij “Each One Teach One” in de footer gehouden.
+
+<img src="uitwerkingscreenshot5.png" width="375px" alt="De horizontaal bewegende Let's connect-carrousel">
+
+<img src="uitwerkingscreenshot12.png" width="375px" alt="De bewegende Let's connect-carrousel van de patta website">
 
 
 
