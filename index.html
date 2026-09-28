@@ -19,9 +19,9 @@
 
       <nav aria-label="Main navigation">
         <ul>
-          <li><a href="#">Menu</a></li>
+          <li><a href="#latest-collection">Menu</a></li>
           <li><a href="#">Account</a></li>
-          <li><a href="#">Cart</a></li>
+          <li><a href="product.html">Cart</a></li>
         </ul>
       </nav>
     </header>
@@ -30,7 +30,7 @@
       <section>
         <img
           src="images/backgroundhomepage.png"
-          alt="Patta Back to School-campagne"
+          alt="Patta Back to School campaign"
         />
 
         <div>
@@ -44,15 +44,17 @@
       </section>
 
       <div>
-        <img src="images/img2.png" alt="Patta T-shirt fotoshoot" />
+        <img src="images/img2.png" alt="Patta T-shirt photoshoot" />
       </div>
 
-      <section class="producten">
+      <section class="producten" id="latest-collection">
         <h2>Latest Collection</h2>
 
         <div class="productlijst">
           <article class="productkaart">
-            <img src="images/product1.png" alt="Blauwe Patta-trui" />
+            <a href="product.html">
+              <img src="images/product1.png" alt="Black Patta hooded sweater" />
+            </a>
             <p>Patta</p>
             <h3>Patta Championship Hooded Sweater (Black)</h3>
             <p>Black</p>
@@ -61,16 +63,18 @@
 
           <article class="productkaart">
             <a href="product.html">
-              <img src="images/product2.png" alt="Groen Patta-shirt" />
-              <p>Patta</p>
-              <h3>Patta Championship T-Shirt (Dusty Olive)</h3>
-              <p>Dusty Olive</p>
-              <p>€58,00</p>
+              <img src="images/product2.png" alt="Olive Patta T-shirt" />
             </a>
+            <p>Patta</p>
+            <h3>Patta Championship T-Shirt (Dusty Olive)</h3>
+            <p>Dusty Olive</p>
+            <p>€58,00</p>
           </article>
 
           <article class="productkaart">
-            <img src="images/product3.png" alt="Zwart Patta-shirt" />
+            <a href="product.html">
+              <img src="images/product3.png" alt="Black Patta T-shirt" />
+            </a>
             <p>Patta</p>
             <h3>Patta Championship T-Shirt (Black)</h3>
             <p>Black</p>
@@ -78,7 +82,9 @@
           </article>
 
           <article class="productkaart">
-            <img src="images/product4.png" alt="Wit Patta-shirt" />
+            <a href="product.html">
+              <img src="images/product4.png" alt="White Patta T-shirt" />
+            </a>
             <p>Patta</p>
             <h3>Patta Championship T-Shirt (White)</h3>
             <p>White</p>
@@ -86,7 +92,12 @@
           </article>
 
           <article class="productkaart">
-            <img src="images/product5.png" alt="Zwarte Patta-kindertrui" />
+            <a href="product.html">
+              <img
+                src="images/product5.png"
+                alt="Black Patta kids hooded sweater"
+              />
+            </a>
             <p>Patta</p>
             <h3>Patta Kids Championship Hooded Sweater (Black)</h3>
             <p>Black</p>
@@ -94,7 +105,9 @@
           </article>
 
           <article class="productkaart">
-            <img src="images/product6.png" alt="Blauw Patta-kindershirt" />
+            <a href="product.html">
+              <img src="images/product6.png" alt="Navy Patta kids T-shirt" />
+            </a>
             <p>Patta</p>
             <h3>Patta Kids Championship T-Shirt (Black Iris)</h3>
             <p>Navy</p>
@@ -108,7 +121,7 @@
       <section class="carousel">
         <h2>Latest Footwear</h2>
 
-        <ul>
+        <ul tabindex="0" aria-label="Latest Footwear products">
           <li>
             <article>
               <img
@@ -142,7 +155,7 @@
             <article>
               <img
                 src="images/schoenen3.png"
-                alt="Adidas BB F50 Ghost Sprint in zwart en blauw"
+                alt="Black and blue Adidas BB F50 Ghost Sprint"
               />
               <p>Adidas</p>
               <h3>
@@ -157,7 +170,7 @@
             <article>
               <img
                 src="images/schoenen4.png"
-                alt="Adidas BB F50 Ghost Sprint in donkerblauw"
+                alt="Dark blue Adidas BB F50 Ghost Sprint"
               />
               <p>Adidas</p>
               <h3>
@@ -172,50 +185,99 @@
         <a href="product.html">Shop more</a>
       </section>
 
-     <section>
-	<p>Join the community</p>
-	<h2>Let's connect</h2>
+      <section id="community">
+        <p>Join the community</p>
+        <h2>Let's connect</h2>
 
-	<input
-		type="checkbox"
-		id="community-pauze"
-		class="visually-hidden"
-	>
+        <input class="visually-hidden" type="checkbox" id="community-pauze" />
+        <label for="community-pauze" class="community-pauze">
+          <span class="pauzeren">Pause animation</span>
+          <span class="afspelen">Play animation</span>
+        </label>
 
-	<label for="community-pauze" class="community-pauze">
-		<span class="pauzeren">Pause carousel</span>
-		<span class="afspelen">Play carousel</span>
-	</label>
-
-	<ul class="tweede-carousel">
+        <ul class="tweede-carousel" tabindex="0" aria-label="Community images">
           <li>
+            <img
+              src="images/carouselimg1.png"
+              alt="Patta community members wearing Patta clothing"
+            />
+          </li>
+          <li>
+            <img
+              src="images/carouselimg2.png"
+              alt="Close-up of a black Patta jacket"
+            />
+          </li>
+          <li>
+            <img
+              src="images/carouselimg3.png"
+              alt="Three people wearing Patta football shirts"
+            />
+          </li>
+          <li>
+            <img
+              src="images/carouselimg4.png"
+              alt="Man running a marathon in Nike clothing in front of a crowd"
+            />
+          </li>
+          <li>
+            <img
+              src="images/carouselimg5.png"
+              alt="Friends wearing white patta t-shirts"
+            />
+          </li>
+          <li>
+            <img
+              src="images/carouselimg6.png"
+              alt="Bike club standing in front of a grass field in patta clothes"
+            />
+          </li>
+          <li>
+            <img
+              src="images/carouselimg7.png"
+              alt="Yellow sweatshirt hanging on a washing line with the Patta logo in front of it"
+            />
+          </li>
+          <li>
+            <img
+              src="images/carouselimg8.png"
+              alt="Family sitting on grass in a Patta outfit and New balance sneakers"
+            />
+          </li>
+
+          <!-- Deze kopieën zorgen dat de beweging zonder onderbreking doorgaat. -->
+          <li aria-hidden="true">
             <img src="images/carouselimg1.png" alt="" />
           </li>
-          <li>
+          <li aria-hidden="true">
             <img src="images/carouselimg2.png" alt="" />
           </li>
-          <li>
+          <li aria-hidden="true">
             <img src="images/carouselimg3.png" alt="" />
           </li>
-          <li>
+          <li aria-hidden="true">
             <img src="images/carouselimg4.png" alt="" />
           </li>
-          <li>
+          <li aria-hidden="true">
             <img src="images/carouselimg5.png" alt="" />
           </li>
-          <li>
+          <li aria-hidden="true">
             <img src="images/carouselimg6.png" alt="" />
           </li>
-          <li>
+          <li aria-hidden="true">
             <img src="images/carouselimg7.png" alt="" />
           </li>
-          <li>
+          <li aria-hidden="true">
             <img src="images/carouselimg8.png" alt="" />
           </li>
         </ul>
 
+        <!--
+          Bron voor de semantische opbouw van een formulier:
+          https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
+        -->
         <form>
-          <label for="email"></label>
+          <label for="email" class="visually-hidden"> Email address </label>
 
           <input
             type="email"
@@ -234,14 +296,14 @@
 
     <footer>
       <section>
-        <h2>EACH ONE<br />TEACH ONE</h2>
+        <h2 class="scroll-kop">EACH ONE<br />TEACH ONE</h2>
 
         <p>
           Unlock a world of possibilities with Patta. Get exclusive drops,
           behind-the-scenes content, and invitations to special events.
         </p>
 
-        <a href="#">Join the community</a>
+        <a href="#community">Join the community</a>
       </section>
 
       <nav aria-label="Footer navigation">

@@ -30,7 +30,7 @@
 
       <nav aria-label="Main navigation">
         <ul>
-          <li><a href="#">Menu</a></li>
+          <li><a href="index.html#latest-collection">Menu</a></li>
           <li><a href="#">Account</a></li>
           <li>
             <button type="button" id="cart-button">
@@ -49,30 +49,34 @@
             <a href="index.html">Shop</a>
           </li>
           <li>
-            <a href="#">Autumn Winter '26</a>
+            <a href="index.html">Autumn winter'26 </a>
           </li>
-          <li aria-current="page">Patta Championship T-Shirt (Dusty Olive)</li>
+          <li>
+            <span aria-current="page">
+              Patta Championship T-Shirt (Dusty Olive)
+            </span>
+          </li>
         </ol>
       </nav>
 
-      <section aria-label="Productfoto's">
+      <section aria-label="Product images">
         <ul>
           <li>
             <img
               src="images/product2-kleurolive.png"
-              alt="Achterkant van het olijfgroene Patta Championship T-shirt"
+              alt="Back of the olive Patta Championship T-Shirt"
             />
           </li>
           <li>
             <img
               src="images/product2-img1.png"
-              alt="Voorkant van het olijfgroene Patta Championship T-shirt"
+              alt="Front of the olive Patta Championship T-Shirt"
             />
           </li>
           <li>
             <img
               src="images/product2.png"
-              alt="Model staat met het olijfgroene Patta Championship T-shirt aan"
+              alt="Model wearing the olive Patta Championship T-Shirt"
             />
           </li>
         </ul>
@@ -81,35 +85,35 @@
       <section aria-labelledby="productnaam">
         <p>New</p>
 
-        <button type="button" aria-label="Voeg toe aan verlanglijst">♡</button>
+        <button type="button" aria-label="Add to wishlist">♡</button>
 
         <p>Patta</p>
         <h1 id="productnaam">Patta Championship T-Shirt (Dusty Olive)</h1>
         <p>€58,00</p>
 
-        <form action="#" method="get">
+        <!--
+          Bron voor de opbouw van formulieren met fieldset, legend, label en inputs:
+          https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
+          Bron voor radio buttons:
+          https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/radio
+        -->
+        <form>
           <fieldset>
             <legend id="gekozen-kleur">Color: Olive</legend>
 
             <label>
               <input type="radio" name="kleur" value="black" />
-              <img
-                src="images/product2-kleurzwart.png"
-                alt="Zwarte uitvoering"
-              />
+              <img src="images/product2-kleurzwart.png" alt="Black version" />
             </label>
 
             <label>
               <input type="radio" name="kleur" value="olive" checked />
-              <img
-                src="images/product2-kleurolive.png"
-                alt="Olijfgroene uitvoering"
-              />
+              <img src="images/product2-kleurolive.png" alt="Olive version" />
             </label>
 
             <label>
               <input type="radio" name="kleur" value="white" />
-              <img src="images/product2-kleurwit.png" alt="Witte uitvoering" />
+              <img src="images/product2-kleurwit.png" alt="White version" />
             </label>
           </fieldset>
 
@@ -121,11 +125,18 @@
             <label><input type="radio" name="maat" value="M" /> M</label>
             <label><input type="radio" name="maat" value="L" /> L</label>
             <label><input type="radio" name="maat" value="XL" /> XL</label>
-            <label><input type="radio" name="maat" value="XXL" /> XXL</label>
+            <label>
+              <input type="radio" name="maat" value="XXL" disabled />
+              XXL
+              <span class="visually-hidden">Out of stock</span>
+            </label>
           </fieldset>
 
+          <p id="maat-fout" role="alert"></p>
+
           <p>
-            Jemal is 184cm and wears a size large. <a href="#">Need help?</a>
+            Jemal is 184cm and wears a size large.
+            <a href="#size-and-fit">Need help?</a>
           </p>
 
           <button type="submit">Add to cart</button>
@@ -139,7 +150,7 @@
         </ul>
       </section>
 
-      <section aria-label="Productinformatie">
+      <section aria-label="Product information">
         <p>
           The Patta Championship T-Shirt is made from soft 100% cotton single
           jersey. The style is finished with a silkscreen Patta script logo on
@@ -147,13 +158,17 @@
           with digital printed Remember The Name artwork. Made in Turkey.
         </p>
 
-        <details>
+        <!--
+          Bron voor uitklapbare informatie met details en summary:
+          https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details
+        -->
+        <details id="size-and-fit">
           <summary>Size &amp; Fit</summary>
           <p>Jemal is 184cm and wears a size large.</p>
-          <p><a href="#">Need help?</a></p>
+          <p><a href="#size-and-fit">Need help?</a></p>
         </details>
 
-        <details>
+        <details id="shipping-and-returns">
           <summary>Shipping &amp; Returns</summary>
           <p>
             We offer UPS Standard, Express Saver, and Express shipping options.
@@ -164,7 +179,7 @@
             We accept returns within 14 days. Sale items can only be refunded as
             store credit.
           </p>
-          <p><a href="#">More info</a></p>
+          <p><a href="#shipping-and-returns">More info</a></p>
         </details>
 
         <details>
@@ -193,15 +208,15 @@
         <ul>
           <li>
             <article>
-              <a href="#">
+              <a href="product.html">
                 <img
                   src="images/product7.png"
                   alt="Patta Charm T-Shirt in Climbing Ivy"
                 />
-                <h3>Patta Charm T-Shirt (Climbing Ivy)</h3>
               </a>
               <p>New</p>
               <p>Patta</p>
+              <h3>Patta Charm T-Shirt (Climbing Ivy)</h3>
               <p>Olive</p>
               <p>€58,00</p>
             </article>
@@ -209,15 +224,15 @@
 
           <li>
             <article>
-              <a href="#">
+              <a href="product.html">
                 <img
                   src="images/product8.png"
-                  alt="Zwart Patta Charm T-Shirt"
+                  alt="Black Patta Charm T-Shirt"
                 />
-                <h3>Patta Charm T-Shirt (Black)</h3>
               </a>
               <p>New</p>
               <p>Patta</p>
+              <h3>Patta Charm T-Shirt (Black)</h3>
               <p>Black</p>
               <p>€58,00</p>
             </article>
@@ -225,14 +240,14 @@
 
           <li>
             <article>
-              <a href="#">
+              <a href="product.html">
                 <img
                   src="images/product9.png"
-                  alt="Zwart Tubular T-Shirt 3-Pack"
+                  alt="Black Tubular T-Shirt 3-Pack"
                 />
-                <h3>Tubular T-Shirt 3-Pack (Black)</h3>
               </a>
               <p>Patta</p>
+              <h3>Tubular T-Shirt 3-Pack (Black)</h3>
               <p>Black</p>
               <p>€58,00</p>
             </article>
@@ -240,50 +255,95 @@
         </ul>
       </section>
 
-     <section>
-	<p>Join the community</p>
-	<h2>Let's connect</h2>
+      <section id="community">
+        <p>Join the community</p>
+        <h2>Let's connect</h2>
 
-	<input
-		type="checkbox"
-		id="community-pauze"
-		class="visually-hidden"
-	>
+        <input class="visually-hidden" type="checkbox" id="community-pauze" />
+        <label for="community-pauze" class="community-pauze">
+          <span class="pauzeren">Pause animation</span>
+          <span class="afspelen">Play animation</span>
+        </label>
 
-	<label for="community-pauze" class="community-pauze">
-		<span class="pauzeren">Pause carousel</span>
-		<span class="afspelen">Play carousel</span>
-	</label>
-
-	<ul class="tweede-carousel">
+        <ul class="tweede-carousel" tabindex="0" aria-label="Community images">
           <li>
+            <img
+              src="images/carouselimg1.png"
+              alt="Patta community members wearing Patta clothing"
+            />
+          </li>
+          <li>
+            <img
+              src="images/carouselimg2.png"
+              alt="Close-up of a black Patta jacket"
+            />
+          </li>
+          <li>
+            <img
+              src="images/carouselimg3.png"
+              alt="Three people wearing Patta football shirts"
+            />
+          </li>
+          <li>
+            <img
+              src="images/carouselimg4.png"
+              alt="Man running a marathon in Nike clothing in front of a crowd"
+            />
+          </li>
+          <li>
+            <img
+              src="images/carouselimg5.png"
+              alt="Friends wearing white patta t-shirts"
+            />
+          </li>
+          <li>
+            <img
+              src="images/carouselimg6.png"
+              alt="Bike club standing in front of a grass field in patta clothes"
+            />
+          </li>
+          <li>
+            <img
+              src="images/carouselimg7.png"
+              alt="Yellow sweatshirt hanging on a washing line with the Patta logo in front of it"
+            />
+          </li>
+          <li>
+            <img
+              src="images/carouselimg8.png"
+              alt="Family sitting on grass in a Patta outfit and New balance sneakers"
+            />
+          </li>
+
+          <!-- Deze kopieën zorgen dat de beweging zonder onderbreking doorgaat. -->
+          <li aria-hidden="true">
             <img src="images/carouselimg1.png" alt="" />
           </li>
-          <li>
+          <li aria-hidden="true">
             <img src="images/carouselimg2.png" alt="" />
           </li>
-          <li>
+          <li aria-hidden="true">
             <img src="images/carouselimg3.png" alt="" />
           </li>
-          <li>
+          <li aria-hidden="true">
             <img src="images/carouselimg4.png" alt="" />
           </li>
-          <li>
+          <li aria-hidden="true">
             <img src="images/carouselimg5.png" alt="" />
           </li>
-          <li>
+          <li aria-hidden="true">
             <img src="images/carouselimg6.png" alt="" />
           </li>
-          <li>
+          <li aria-hidden="true">
             <img src="images/carouselimg7.png" alt="" />
           </li>
-          <li>
+          <li aria-hidden="true">
             <img src="images/carouselimg8.png" alt="" />
           </li>
         </ul>
 
         <form>
-          <label for="email"></label>
+          <label for="email" class="visually-hidden"> Email address </label>
 
           <input
             type="email"
@@ -298,21 +358,18 @@
 
         <p>We respect your privacy. Unsubscribe at any time.</p>
       </section>
-      <!-- DE MODELESS CART DIALOG -->
+      <!--
+        Bronnen voor de modeless cart dialog:
+        https://codepen.io/shooft/pen/azvKYVZ
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog
+      -->
       <dialog id="cart-dialog">
         <form method="dialog">
           <h2>Added to cart</h2>
 
-          <button
-	type="submit"
-	class="close"
-	aria-label="Sluit winkelmandje"
->
-	X
-</button>
-
-          <section>
+          <section aria-label="Cart item">
             <img
+              id="cart-afbeelding"
               src="images/product2-kleurolive.png"
               alt="Patta Championship T-Shirt in Dusty Olive"
             />
@@ -325,21 +382,21 @@
             </div>
           </section>
 
-          <button type="submit">Continue shopping</button>
+          <button type="submit" class="cart-doorgaan">Continue shopping</button>
         </form>
       </dialog>
     </main>
 
     <footer>
       <section>
-        <h2>EACH ONE<br />TEACH ONE</h2>
+        <h2 class="scroll-kop">EACH ONE<br />TEACH ONE</h2>
 
         <p>
           Unlock a world of possibilities with Patta. Get exclusive drops,
           behind-the-scenes content, and invitations to special events.
         </p>
 
-        <a href="#">Join the community</a>
+        <a href="#community">Join the community</a>
       </section>
 
       <nav aria-label="Footer navigation">

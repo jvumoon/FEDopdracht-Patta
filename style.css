@@ -2,6 +2,10 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 
+/*
+  Bron voor CSS custom properties:
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties
+*/
 :root {
   /* Kleuren */
   --kleur-tekst: #111111;
@@ -11,7 +15,13 @@
   --kleur-product: #f1f1f1;
   --kleur-rand: #dddddd;
   --kleur-grijs: #888888;
+  --kleur-lichtgrijs: #cccccc;
+  --kleur-footergrijs: #aaaaaa;
   --kleur-donkergrijs: #292929;
+  --kleur-accent: #df5858;
+  --kleur-productaccent: #777363;
+  --kleur-foutachtergrond: #fff1f1;
+  --kleur-fouttekst: #9b1c1c;
 
   /* Afstanden */
   --ruimte-xs: 0.5em;
@@ -22,16 +32,25 @@
   --ruimte-xxl: 3em;
 
   /* Tekstgroottes */
+  --tekst-xxs: 0.55rem;
   --tekst-xs: 0.65rem;
   --tekst-s: 0.75rem;
   --tekst-m: 1rem;
   --tekst-l: 1.5rem;
-  --tekst-xl: 2rem;
+  --tekst-xxl: 3rem;
+  --tekst-display: 4rem;
+  --tekst-kop-responsive: clamp(1.5rem, 6vw, 2rem);
+  --tekst-hero: clamp(2rem, 9vw, 3.5rem);
+  --tekst-intro: clamp(1.05rem, 4vw, 1.4rem);
 
   /* Overige waarden */
   --standaard-rand: 1px solid var(--kleur-rand);
   --kleine-radius: 0.25em;
   --hoofdletter-afstand: 0.12em;
+  --animatie-snel: 0.15s;
+  --animatie-normaal: 0.3s;
+  --animatie-knipper: 0.4s;
+  --carousel-snelheid: 35s;
 }
 
 /**************/
@@ -104,6 +123,10 @@ a {
 /* HEADER */
 /**********/
 
+/*
+  Bron voor de pagina-opbouw met CSS Grid:
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout
+*/
 body > header {
   position: absolute;
   top: 0;
@@ -193,7 +216,7 @@ body:not(.productpagina) main > section:first-of-type div p {
 }
 
 body:not(.productpagina) main > section:first-of-type h1 {
-  font-size: clamp(2rem, 9vw, 3.5rem);
+  font-size: var(--tekst-hero);
   font-weight: normal;
   line-height: 1;
 }
@@ -239,6 +262,10 @@ body:not(.productpagina) main > section:first-of-type > p:last-child {
 
 body:not(.productpagina) main > div:first-of-type {
   display: grid;
+
+  padding: var(--ruimte-l);
+
+  background-color: var(--kleur-wit);
 }
 
 body:not(.productpagina) main > div:first-of-type img {
@@ -259,7 +286,7 @@ body:not(.productpagina) main > div:first-of-type img {
 }
 
 .producten h2 {
-  font-size: clamp(1.5rem, 6vw, 2rem);
+  font-size: var(--tekst-kop-responsive);
   line-height: 1.1;
 }
 
@@ -277,7 +304,6 @@ body:not(.productpagina) main > div:first-of-type img {
   min-width: 0;
 }
 
-.productkaart > img,
 .productkaart > a > img {
   width: 100%;
   aspect-ratio: 3 / 4;
@@ -322,6 +348,11 @@ body:not(.productpagina) main > div:first-of-type img {
 /* LATEST FOOTWEAR */
 /*******************/
 
+/*
+  Bronnen voor horizontale carrousels en scroll snap:
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overflow/Carousels
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll_snap
+*/
 .carousel {
   display: grid;
   gap: var(--ruimte-l);
@@ -331,8 +362,10 @@ body:not(.productpagina) main > div:first-of-type img {
 }
 
 .carousel h2 {
-  font-size: clamp(1.5rem, 6vw, 2rem);
-  line-height: 1.1;
+  font-size: var(--tekst-l);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
 }
 
 .carousel > ul {
@@ -407,9 +440,12 @@ body:not(.productpagina) main > div:first-of-type img {
 
 main > section:has(.tweede-carousel) {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   justify-items: center;
   gap: var(--ruimte-m);
 
+  width: 100%;
+  min-width: 0;
   padding: var(--ruimte-xl) var(--ruimte-m);
 
   text-align: center;
@@ -417,37 +453,45 @@ main > section:has(.tweede-carousel) {
 }
 
 main > section:has(.tweede-carousel) > p:first-child {
-  font-size: var(--tekst-xs);
-  font-weight: bold;
+  font-size: var(--tekst-s);
+  font-weight: 600;
+  line-height: 1.3;
   letter-spacing: var(--hoofdletter-afstand);
   text-transform: uppercase;
 }
 
 main > section:has(.tweede-carousel) > h2 {
-  font-size: var(--tekst-xl);
-  line-height: 1;
+  font-size: var(--tekst-xxl);
+  font-weight: 600;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
 }
 
 .tweede-carousel {
+  --community-gap: var(--ruimte-xs);
+
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 68%;
-  gap: var(--ruimte-xs);
+  grid-auto-columns: min(68vw, 18em);
+  gap: var(--community-gap);
 
-  width: calc(100% + 2em);
-  padding-inline: var(--ruimte-m);
+  justify-self: start;
 
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
+  width: max-content;
+  min-width: 0;
+
+  animation: community-bewegen var(--carousel-snelheid) linear infinite;
+  will-change: transform;
 }
 
-.tweede-carousel::-webkit-scrollbar {
-  display: none;
+@keyframes community-bewegen {
+  to {
+    transform: translateX(calc(-50% - var(--community-gap) / 2));
+  }
 }
 
 .tweede-carousel li {
-  scroll-snap-align: center;
+  min-width: 0;
 }
 
 .tweede-carousel img {
@@ -456,16 +500,69 @@ main > section:has(.tweede-carousel) > h2 {
   object-fit: cover;
 }
 
+/* Met deze knop kan de bezoeker de automatisch bewegende rij pauzeren. */
+.community-pauze {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  place-items: center;
+  justify-self: center;
+
+  min-width: 11em;
+  padding: var(--ruimte-s) var(--ruimte-m);
+
+  border: 1px solid var(--kleur-zwart);
+  background-color: var(--kleur-zwart);
+  color: var(--kleur-wit);
+
+  font-size: var(--tekst-xs);
+  font-weight: bold;
+  letter-spacing: var(--hoofdletter-afstand);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.community-pauze:hover {
+  background-color: var(--kleur-wit);
+  color: var(--kleur-zwart);
+}
+
+#community-pauze:focus-visible + .community-pauze {
+  outline: 3px solid var(--kleur-accent);
+  outline-offset: 0.2em;
+}
+
+#community-pauze:not(:checked) + .community-pauze .afspelen,
+#community-pauze:checked + .community-pauze .pauzeren {
+  display: none;
+}
+
+#community-pauze:checked ~ .tweede-carousel {
+  animation-play-state: paused;
+}
+
+/* De checkbox blijft bruikbaar voor screenreaders en het toetsenbord. */
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  padding: 0;
+
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
 main > section:has(.tweede-carousel) form {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto;
+  justify-self: center;
 
   width: 100%;
   max-width: 28em;
-}
-
-main > section:has(.tweede-carousel) form label:empty {
-  display: none;
 }
 
 main > section:has(.tweede-carousel) input {
@@ -512,7 +609,7 @@ main > section:has(.tweede-carousel) > p:last-child {
   min-height: 10em;
   padding: 3.2em var(--ruimte-l) var(--ruimte-l);
 
-  background-color: var(--kleur-wit);
+  background-color: var(--kleur-achtergrond);
 }
 
 .productpagina > header > ul {
@@ -553,7 +650,7 @@ main > section:has(.tweede-carousel) > p:last-child {
 /*****************/
 
 .productpagina main {
-  background-color: var(--kleur-wit);
+  background-color: var(--kleur-achtergrond);
 }
 
 .productpagina main > nav {
@@ -563,7 +660,7 @@ main > section:has(.tweede-carousel) > p:last-child {
   overflow: hidden;
 }
 
-.productpagina main > nav ul {
+.productpagina main > nav ol {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: max-content;
@@ -596,14 +693,18 @@ main > section:has(.tweede-carousel) > p:last-child {
 /* PRODUCTAFBEELDINGEN */
 /*************************/
 
-.productpagina section[aria-label="Productfoto's"] {
+/*
+  Ook deze productcarrousel gebruikt overflow en scroll snap:
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll_snap
+*/
+.productpagina section[aria-label="Product images"] {
   display: grid;
   overflow: hidden;
 
-  background-color: var(--kleur-product);
+  background-color: var(--kleur-achtergrond);
 }
 
-.productpagina section[aria-label="Productfoto's"] > ul {
+.productpagina section[aria-label="Product images"] > ul {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 86%;
@@ -614,23 +715,27 @@ main > section:has(.tweede-carousel) > p:last-child {
   scrollbar-width: none;
 }
 
-.productpagina section[aria-label="Productfoto's"] > ul::-webkit-scrollbar {
+.productpagina section[aria-label="Product images"] > ul::-webkit-scrollbar {
   display: none;
 }
 
-.productpagina section[aria-label="Productfoto's"] li {
+.productpagina section[aria-label="Product images"] li {
   display: grid;
   place-items: center;
 
   scroll-snap-align: center;
 }
 
-.productpagina section[aria-label="Productfoto's"] img {
+.productpagina section[aria-label="Product images"] img {
   width: 100%;
   height: min(110vw, 34em);
   object-fit: contain;
 
   background-color: var(--kleur-product);
+
+  transition:
+    opacity var(--animatie-normaal) ease,
+    scale var(--animatie-normaal) ease;
 }
 
 /**********************/
@@ -643,10 +748,17 @@ main > section:has(.tweede-carousel) > p:last-child {
   display: grid;
   gap: var(--ruimte-s);
 
+  margin: var(--ruimte-m) var(--ruimte-m) var(--ruimte-l);
   padding: var(--ruimte-l);
 
   background-color: var(--kleur-wit);
   border-radius: var(--kleine-radius);
+
+  /* De schaduw maakt de omgeving grijs en stopt vóór Product information. */
+  box-shadow: 0 0 0 100vmax var(--kleur-achtergrond);
+  clip-path: inset(
+    calc(-1 * var(--ruimte-m)) -100vmax calc(-1 * var(--ruimte-l))
+  );
 }
 
 .productpagina section[aria-labelledby="productnaam"] > p:first-child {
@@ -684,7 +796,7 @@ main > section:has(.tweede-carousel) > p:last-child {
 .productpagina #productnaam {
   padding-right: 2.5em;
 
-  font-size: 1rem;
+  font-size: var(--tekst-m);
   font-weight: normal;
   line-height: 1.4;
 }
@@ -753,6 +865,11 @@ main > section:has(.tweede-carousel) > p:last-child {
 
   border: var(--standaard-rand);
   background-color: var(--kleur-product);
+
+  transition:
+    border-color var(--animatie-snel),
+    box-shadow var(--animatie-snel),
+    scale var(--animatie-snel);
 }
 
 .productpagina section[aria-labelledby="productnaam"] input[type="radio"] {
@@ -769,8 +886,8 @@ main > section:has(.tweede-carousel) > p:last-child {
   fieldset:first-of-type
   label:has(input:checked)
   img {
-  border-color: var(--kleur-tekst);
-  box-shadow: inset 0 0 0 1px var(--kleur-tekst);
+  border-color: var(--kleur-productaccent);
+  box-shadow: inset 0 0 0 1px var(--kleur-productaccent);
 }
 
 .productpagina
@@ -778,8 +895,19 @@ main > section:has(.tweede-carousel) > p:last-child {
   fieldset:first-of-type
   label:has(input:focus-visible)
   img {
-  outline: 2px solid var(--kleur-tekst);
+  outline: 3px solid var(--kleur-accent);
   outline-offset: 0.2em;
+}
+
+@media (hover: hover) {
+  .productpagina
+    section[aria-labelledby="productnaam"]
+    fieldset:first-of-type
+    label:hover
+    img {
+    border-color: var(--kleur-productaccent);
+    scale: 1.02;
+  }
 }
 
 /***************/
@@ -802,6 +930,8 @@ main > section:has(.tweede-carousel) > p:last-child {
   section[aria-labelledby="productnaam"]
   fieldset:nth-of-type(2)
   label {
+  position: relative;
+
   display: grid;
   place-items: center;
 
@@ -812,14 +942,76 @@ main > section:has(.tweede-carousel) > p:last-child {
 
   font-size: var(--tekst-s);
   cursor: pointer;
+
+  transition:
+    background-color var(--animatie-snel),
+    border-color var(--animatie-snel),
+    color var(--animatie-snel);
 }
 
 .productpagina
   section[aria-labelledby="productnaam"]
   fieldset:nth-of-type(2)
   label:has(input:checked) {
-  border-color: var(--kleur-tekst);
-  box-shadow: inset 0 0 0 1px var(--kleur-tekst);
+  border-color: var(--kleur-productaccent);
+  background-color: var(--kleur-productaccent);
+  color: var(--kleur-wit);
+}
+
+.productpagina
+  section[aria-labelledby="productnaam"]
+  fieldset:nth-of-type(2)
+  label:has(input:focus-visible) {
+  outline: 3px solid var(--kleur-accent);
+  outline-offset: 0.2em;
+}
+
+.productpagina
+  section[aria-labelledby="productnaam"]
+  fieldset:nth-of-type(2)
+  label:has(input:disabled) {
+  color: var(--kleur-grijs);
+  background-color: var(--kleur-product);
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.productpagina
+  section[aria-labelledby="productnaam"]
+  fieldset:nth-of-type(2)
+  label:has(input:disabled)::after {
+  content: "";
+  position: absolute;
+  right: 15%;
+  left: 15%;
+
+  border-top: 1px solid currentColor;
+  rotate: -15deg;
+}
+
+@media (hover: hover) {
+  .productpagina
+    section[aria-labelledby="productnaam"]
+    fieldset:nth-of-type(2)
+    label:not(:has(input:disabled)):hover {
+    border-color: var(--kleur-productaccent);
+  }
+}
+
+#maat-fout:empty {
+  display: none;
+}
+
+#maat-fout:not(:empty) {
+  display: block;
+  padding: var(--ruimte-s);
+
+  border: 1px solid var(--kleur-accent);
+  background-color: var(--kleur-foutachtergrond);
+  color: var(--kleur-fouttekst);
+
+  font-size: var(--tekst-s);
+  line-height: 1.4;
 }
 
 .productpagina section[aria-labelledby="productnaam"] form > p {
@@ -888,15 +1080,21 @@ main > section:has(.tweede-carousel) > p:last-child {
 /* PRODUCTBESCHRIJVING */
 /**********************/
 
-.productpagina section[aria-label="Productinformatie"] {
+.productpagina section[aria-label="Product information"] {
   display: grid;
   gap: var(--ruimte-l);
 
   padding: 4em var(--ruimte-l);
+
+  background-color: var(--kleur-wit);
 }
 
-.productpagina section[aria-label="Productinformatie"] > p {
-  font-size: clamp(1.05rem, 4vw, 1.4rem);
+.productpagina section[aria-label="Product information"] ~ section {
+  background-color: var(--kleur-wit);
+}
+
+.productpagina section[aria-label="Product information"] > p {
+  font-size: var(--tekst-intro);
   line-height: 1.5;
 }
 
@@ -909,7 +1107,7 @@ main > section:has(.tweede-carousel) > p:last-child {
 .productpagina details summary {
   padding-block: var(--ruimte-l);
 
-  font-size: 1rem;
+  font-size: var(--tekst-m);
   font-weight: bold;
   cursor: pointer;
 }
@@ -952,7 +1150,7 @@ main > section:has(.tweede-carousel) > p:last-child {
 }
 
 .productpagina #gerelateerde-producten {
-  font-size: clamp(1.5rem, 6vw, 2rem);
+  font-size: var(--tekst-kop-responsive);
 }
 
 .productpagina main > section[aria-labelledby="gerelateerde-producten"] > ul {
@@ -986,6 +1184,8 @@ main > section:has(.tweede-carousel) > p:last-child {
   main
   > section[aria-labelledby="gerelateerde-producten"]
   article {
+  position: relative;
+
   display: grid;
   align-content: start;
   gap: 0.3em;
@@ -1013,7 +1213,7 @@ main > section:has(.tweede-carousel) > p:last-child {
   > section[aria-labelledby="gerelateerde-producten"]
   article
   p {
-  font-size: var(--tekst-s);
+  font-size: var(--tekst-m);
   font-weight: normal;
   line-height: 1.3;
 }
@@ -1022,8 +1222,7 @@ main > section:has(.tweede-carousel) > p:last-child {
   main
   > section[aria-labelledby="gerelateerde-producten"]
   article
-  p:first-of-type {
-  padding-top: var(--ruimte-xs);
+  > p:has(+ h3) {
   font-weight: bold;
 }
 
@@ -1031,8 +1230,30 @@ main > section:has(.tweede-carousel) > p:last-child {
   main
   > section[aria-labelledby="gerelateerde-producten"]
   article
-  p:nth-of-type(3) {
+  > h3
+  + p {
   color: var(--kleur-grijs);
+}
+
+.productpagina
+  main
+  > section[aria-labelledby="gerelateerde-producten"]
+  article
+  > a
+  + p:has(+ p + h3) {
+  position: absolute;
+  top: var(--ruimte-xs);
+  left: var(--ruimte-xs);
+
+  padding: 0.4em 0.6em;
+
+  background-color: var(--kleur-zwart);
+  color: var(--kleur-wit);
+
+  font-size: var(--tekst-xxs);
+  font-weight: bold;
+  letter-spacing: var(--hoofdletter-afstand);
+  text-transform: uppercase;
 }
 
 /**********/
@@ -1055,8 +1276,53 @@ body > footer > section {
 }
 
 body > footer > section h2 {
-  font-size: clamp(2rem, 9vw, 3rem);
-  line-height: 0.95;
+  justify-self: end;
+
+  width: 100%;
+
+  font-size: var(--tekst-display);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  text-align: right;
+}
+
+/* Alleen de footerkop beweegt in beeld tijdens het scrollen. */
+@keyframes footer-kop-inbeeld {
+  from {
+    opacity: 0;
+    transform: translateY(2.5em) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Zonder ondersteuning voor scrollanimaties blijft de kop gewoon zichtbaar. */
+body > footer .scroll-kop {
+  opacity: 1;
+  transform: none;
+}
+
+/*
+  Bronnen voor de scroll-driven footeranimatie:
+  https://developer.chrome.com/docs/css-ui/scroll-driven-animations
+  https://scroll-driven-animations.style/#learn
+*/
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    body > footer .scroll-kop {
+      animation-name: footer-kop-inbeeld;
+      animation-duration: 1ms;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: view(block);
+      animation-range-start: entry 0%;
+      animation-range-end: cover 35%;
+    }
+  }
 }
 
 body > footer > section p {
@@ -1098,6 +1364,11 @@ body > footer > nav a {
   font-size: var(--tekst-xs);
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+body > footer a:focus-visible,
+body > footer button:focus-visible {
+  outline-color: var(--kleur-wit);
 }
 
 /****************/
@@ -1151,9 +1422,9 @@ body > footer > nav a {
 }
 
 .footer-promoties p {
-  color: #cccccc;
+  color: var(--kleur-lichtgrijs);
 
-  font-size: 0.55rem;
+  font-size: var(--tekst-xxs);
   text-transform: uppercase;
 }
 
@@ -1181,7 +1452,7 @@ body > footer > nav a {
   grid-template-columns: 1fr auto;
   gap: var(--ruimte-s);
 
-  color: #aaaaaa;
+  color: var(--kleur-footergrijs);
   font-size: var(--tekst-xs);
 }
 
@@ -1234,12 +1505,8 @@ body > footer > nav a {
   width: 0.5em;
   height: 0.5em;
 
-  background-color: #df5858;
+  background-color: var(--kleur-accent);
   border-radius: 50%;
-}
-
-#cart-aantal.knipperen {
-  animation: cart-knipperen 0.4s ease-in-out 3;
 }
 
 @keyframes cart-knipperen {
@@ -1295,30 +1562,9 @@ body > footer > nav a {
   grid-column: 1;
   grid-row: 1;
 
-  font-size: 1.5rem;
+  font-size: var(--tekst-l);
   font-weight: normal;
   line-height: 1.2;
-}
-
-/******************************/
-/* CART DIALOG → SLUITKNOP */
-/******************************/
-
-#cart-dialog button.close {
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  width: 3em;
-  aspect-ratio: 1;
-  padding: 0;
-
-  border: var(--standaard-rand);
-  background-color: var(--kleur-wit);
-  color: var(--kleur-tekst);
-
-  font-size: var(--tekst-s);
-  font-weight: bold;
 }
 
 /*****************************/
@@ -1348,8 +1594,6 @@ body > footer > nav a {
 }
 
 #cart-dialog section p {
-  margin: 0;
-
   font-size: var(--tekst-s);
   line-height: 1.4;
 }
@@ -1359,25 +1603,35 @@ body > footer > nav a {
 }
 
 /****************************/
-/* GO TO CART-KNOP */
+/* CONTINUE SHOPPING-KNOP */
 /****************************/
 
-#cart-dialog form > a {
+#cart-dialog .cart-doorgaan {
   grid-column: 1 / -1;
 
   display: grid;
   place-items: center;
 
+  width: 100%;
   padding: var(--ruimte-m);
 
+  border: none;
   background-color: var(--kleur-zwart);
   color: var(--kleur-wit);
 
   font-size: var(--tekst-xs);
   font-weight: bold;
   letter-spacing: var(--hoofdletter-afstand);
-  text-decoration: none;
   text-transform: uppercase;
+}
+
+#cart-dialog .cart-doorgaan:hover {
+  background-color: var(--kleur-donkergrijs);
+}
+
+#cart-dialog .cart-doorgaan:focus-visible {
+  outline: 3px solid var(--kleur-accent);
+  outline-offset: 0.2em;
 }
 
 /******************************/
@@ -1386,22 +1640,22 @@ body > footer > nav a {
 
 @media (prefers-reduced-motion: no-preference) {
   #cart-aantal.knipperen {
-    animation: cart-knipperen 0.4s ease-in-out 3;
+    animation: cart-knipperen var(--animatie-knipper) ease-in-out 3;
   }
 
   @supports (transition: display 1s allow-discrete) {
     #cart-dialog {
       transition:
-        display 0.15s allow-discrete,
-        overlay 0.15s allow-discrete,
-        scale 0.15s;
+        display var(--animatie-snel) allow-discrete,
+        overlay var(--animatie-snel) allow-discrete,
+        scale var(--animatie-snel);
 
       scale: 0;
       transform-origin: top right;
     }
 
     #cart-dialog[open] {
-      transition: scale 0.3s;
+      transition: scale var(--animatie-normaal);
       scale: 1;
     }
 
@@ -1417,59 +1671,37 @@ body > footer > nav a {
 /* MINDER ANIMATIE VOOR TOEGANKELIJKHEID */
 /**************************************/
 
+/*
+  Bron voor de toegankelijkheidsvoorkeur prefers-reduced-motion:
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion
+
+  Aanvullend lesmateriaal:
+  FED 25-26 - Blok 1 - Intro media queries, Hogeschool van Amsterdam (DLO)
+*/
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   #cart-aantal.knipperen {
     animation: none;
   }
-}
-footer :focus-visible {
-	outline-color: var(--kleur-wit);
-}
-.productpagina section[aria-label="Productfoto's"] img {
-	transition:
-		opacity 0.3s ease,
-		scale 0.3s ease;
-}
 
-.productpagina
-section[aria-label="Productfoto's"]
-img:active {
-	scale: 0.98;
-}
+  .tweede-carousel {
+    width: 100%;
 
-/*********************************/
-/* FOOTER SCROLL-ANIMATIE */
-/*********************************/
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
 
-@keyframes footer-tekst-inbeeld {
-	from {
-		opacity: 0;
-		transform:
-			translateY(1.5em)
-			scale(0.9);
-	}
+    animation: none;
+  }
 
-	to {
-		opacity: 1;
-		transform:
-			translateY(0)
-			scale(1);
-	}
-}
+  .tweede-carousel li {
+    scroll-snap-align: center;
+  }
 
-
-@supports (animation-timeline: view()) {
-	@media (prefers-reduced-motion: no-preference) {
-		body > footer > section h2 {
-			animation:
-				footer-tekst-inbeeld
-				linear
-				both;
-
-			animation-timeline: view();
-			animation-range:
-				entry 0%
-				entry 90%;
-		}
-	}
+  .tweede-carousel li[aria-hidden="true"],
+  .community-pauze {
+    display: none;
+  }
 }
