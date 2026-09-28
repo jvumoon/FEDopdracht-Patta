@@ -260,8 +260,10 @@ Ik vind het jammer dat dit verschil zichtbaar blijft. Voor de schuine beweging w
 
 Daarnaast wilde ik de kopjes “Latest Footwear” en “Let’s connect” tijdens het scrollen laten inspringen, zoals de tekst in de footer. Dit werkte niet goed: de kopjes verdwenen soms of kwamen op een verkeerde positie terecht. Daarom heb ik deze animatie alleen bij “Each One Teach One” in de footer gehouden.
 
+Mijn uitwerking van de carrousel:
 <img src="uitwerkingscreenshot5.png" width="375px" alt="De horizontaal bewegende Let's connect-carrousel">
-
+<br>
+Patta's officiele website:
 <img src="uitwerkingscreenshot12.png" width="375px" alt="De bewegende Let's connect-carrousel van de patta website">
 
 
